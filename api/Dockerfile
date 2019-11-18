@@ -12,4 +12,4 @@ COPY [".", "./"]
 
 ENTRYPOINT ["R", "-e", "pr <- plumber::plumb(commandArgs()[4]); pr$run(host='0.0.0.0', port=as.numeric(Sys.getenv('PORT')), swagger=TRUE)"]
 
-CMD ["/api/plumber.R"]
+CMD ["plumber.R"]
