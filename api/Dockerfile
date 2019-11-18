@@ -1,6 +1,7 @@
 FROM trestletech/plumber
 
-
+RUN apt-get -y install libmariadb-client-lgpl-dev
+RUN apt-get -y install libsodium-dev
 
 RUN R -e "install.packages('RMySQL')"
 RUN R -e "install.packages('sodium')"
