@@ -6,6 +6,7 @@ RUN apt-get update -q && apt-get install -y \
 
 RUN R -e "install.packages('RMySQL')"
 RUN R -e "install.packages('sodium')"
+RUN R -e "install.packages('plumber')"
 
 COPY / /
 
