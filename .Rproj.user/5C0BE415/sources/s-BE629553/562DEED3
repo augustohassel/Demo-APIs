@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574085797642.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "562DEED3",
+    "lastKnownWriteTime" : 1574085931,
+    "last_content_update" : 1574085931520,
+    "path" : "D:/HasselPunk/APIs/api/dockerfile",
+    "project_path" : "api/dockerfile",
+    "properties" : {
+        "cursorPosition" : "10,13",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}
