@@ -1,9 +1,11 @@
 FROM rocker/r-ver:3.6.1
 
+RUN apt-get update -qq && apt-get install -y \
+      libssl-dev \
+      libcurl4-gnutls-dev
+
 RUN R -e "install.packages('plumber')"
 
-COPY . ./
+COPY / /
 
-ENTRYPOINT ["R", "-e", "pr <- plumber::plumb(commandArgs()[1]); pr$run(host='0.0.0.0', port=as.numeric(Sys.getenv('PORT')))"]
-
-CMD ["plumber.R"]
+ENTRYPOINT ["Rscript", "main.R"]
