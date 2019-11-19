@@ -9,6 +9,12 @@
 
 library(plumber)
 
+#' @get /hello
+#' @html
+function(){
+  "<html><h1>hello world</h1></html>"
+}
+
 #* @apiTitle Plumber Example API
 
 #* Echo back the input
