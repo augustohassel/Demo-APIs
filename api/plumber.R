@@ -58,7 +58,7 @@ function(a, b) {
 #' #' @param stock:character  Ticker obtenido desde Yahoo Finance
 function(res, stock="BTC-USD"){
   temp <- tempfile(fileext = ".pdf")
-  rmarkdown::render("api/InformePDF.Rmd", 
+  rmarkdown::render("InformePDF.Rmd", 
                     output_file = temp,
                     output_format = NULL,
                     params = list(stock = stock))
@@ -70,7 +70,7 @@ function(res, stock="BTC-USD"){
 #' @serializer contentType list(type="application/html; charset=utf-8")
 #' @param stock:character Ticker obtenido desde Yahoo Finance
 function(res, stock="BTC-USD"){
-  f <- rmarkdown::render("api/InformeHTML.Rmd", 
+  f <- rmarkdown::render("InformeHTML.Rmd", 
                          output_format = NULL,
                          params = list(stock = stock))
   include_html(f, res)
