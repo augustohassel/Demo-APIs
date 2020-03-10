@@ -1,0 +1,39 @@
+---
+title: "Activos Financieros"
+author: "Augusto Hassel"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document
+params:
+  stock: BTC-USD
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(quantmod)
+library(dygraphs)
+library(xts)
+```
+
+<style>
+.html-widget {
+    margin: auto;
+}
+</style>
+
+Este es un informe muy importante que contiene un grafico hecho con [quantmod](https://www.quantmod.com/) sobre **`r params$stock`**
+
+
+```{r pressure, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+data <- tryCatch(
+  error = function(cnd) return(data.frame()),
+  {
+    getSymbols(Symbols = params$stock, auto.assign = F, from = Sys.Date() - 180)  
+  }
+  )
+
+if (nrow(data) > 0) {
+  chartSeries(data, theme = 'white', name = params$stock, TA = c(addMACD(), addVo(), addMomentum()))
+}
+
+```
