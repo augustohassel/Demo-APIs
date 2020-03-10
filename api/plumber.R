@@ -45,8 +45,8 @@ function() {
 
 #* Devuelve la suma de dos numeros
 #* @get /sum
-#' @param a:int El primer numero
-#' @param b:int El segundo numero
+#' @param a:numeric El primer numero
+#' @param b:numeric El segundo numero
 function(a, b) {
     as.numeric(a) + as.numeric(b)
 }
