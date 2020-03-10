@@ -1,8 +1,10 @@
-FROM rocker/r-ver:3.6.1
+FROM rocker/verse:latest
 
 RUN apt-get update -qq && apt-get install -y \
       libssl-dev \
-      libcurl4-gnutls-dev
+      libcurl4-gnutls-dev \
+      pandoc \
+      pandoc-citeproc
 
 RUN R -e "install.packages('plumber')"
 RUN R -e "install.packages('rmarkdown')"
