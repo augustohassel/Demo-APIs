@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker' 
+  args: ['build', '-t', 'gcr.io/augusto-hassel/demo-apis', '.'] # build from Dockerfile
+images: ['gcr.io/augusto-hassel/demo-apis'] # push tagged images to Container Registry
+timeout: '1200s' # extend timeout for build to 20 minutes
