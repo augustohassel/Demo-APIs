@@ -55,7 +55,7 @@ function(a, b) {
 #* Informe en PDF
 #* @get /pdf
 #' @serializer contentType list(type="application/pdf; charset=utf-8")
-#' #' @param stock:character  Ticker obtenido desde Yahoo Finance
+#' @param stock:character  Ticker obtenido desde Yahoo Finance
 function(res, stock="BTC-USD"){
   temp <- tempfile(fileext = ".pdf")
   rmarkdown::render("InformePDF.Rmd", 
