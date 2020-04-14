@@ -13,5 +13,3 @@ RUN R -e "install.packages('dygraphs')"
 RUN R -e "install.packages('xts')"
 
 COPY / /
-
-ENTRYPOINT ["Rscript", "main.R"]
